@@ -9,7 +9,7 @@ Data and Project - Datacamp
 
 The data ranges from 1961 to 2019. On plotting the bond yields, we get the following:
 
-<img src="https://github.com/TejaswiniPemmaraju/BondYieldVolatility/assets/129342521/78271872-59b2-4579-b5cd-30f26561b0da" width="350" height="350">
+<img src="https://github.com/TejaswiniPemmaraju/GARCH_BondYieldVolatility/assets/129342521/cfbc5f6d-8e68-4381-859d-174c0775effe" width="350" height="350">
 
 In the above image, the long yields (e.g. SVENY30) tend to be more stable in the long term, while the short yields (e.g. SVENY01) vary a lot. These movements are related to the monetary policy of the FED and economic cycles.
 
@@ -21,7 +21,7 @@ We use differetiation to make the time series independent of time. Differencing 
 
 ##### Step 2: Examining the time series of yield changes
 
-<img src="https://github.com/TejaswiniPemmaraju/BondYieldVolatility/assets/129342521/4637c8c7-ad30-4aea-bd82-b3a383203223" width="350" height="350">
+<img src="https://github.com/TejaswiniPemmaraju/GARCH_BondYieldVolatility/assets/129342521/d610f1ea-2025-42d3-9cb1-ce3879d6e05c" width="350" height="350">
 
 ##### Step 3: Testing for autocorrelation
 
@@ -30,7 +30,7 @@ Autocorrelation measures how a datapoint's past determines the future of a time 
 If the autocorrelation is close to 1, the next day's value will be very close to today's value.
 If the autocorrelation is close to 0, the next day's value will be unaffected by today's value.
 
-<img src="https://github.com/TejaswiniPemmaraju/BondYieldVolatility/assets/129342521/8a8ffefe-fdf5-4cc4-b7ca-7e14f93eb738" width="450" height="450">
+<img src="https://github.com/TejaswiniPemmaraju/GARCH_BondYieldVolatility/assets/129342521/e28c87c1-55c3-408a-8a00-d270eb72d235" width="450" height="450">
 
 Looking at the graph it could mean:
 1. Normal ACF Plot: It suggests that there might not be a simple linear autocorrelation pattern in your data. In other words, the current value at a given time point is not significantly related to its past values at various lags.
@@ -48,11 +48,11 @@ where σ is the current volatility, σt-1 the last day's volatility and εt-1 is
 
 On plotting the yield changes with the estimated volatilities and residuals for 1 year maturity
 
-<img src="https://github.com/TejaswiniPemmaraju/GARCH_BondYieldVolatility/assets/129342521/a2a82a74-ae77-4064-8d2b-027cd739cff6" width="250" height="250">
+<img src="https://github.com/TejaswiniPemmaraju/GARCH_BondYieldVolatility/assets/129342521/3b47e2d7-22f0-4191-8b2c-55bbd6d4caf7" width="250" height="250">
 
 On plotting the yield changes with the estimated volatilities and residuals for 20 year maturity
 
-<img src="https://github.com/TejaswiniPemmaraju/GARCH_BondYieldVolatility/assets/129342521/e8d5763c-4a77-4dcf-9817-88fc6d070f32" width="250" height="250">
+<img src="https://github.com/TejaswiniPemmaraju/GARCH_BondYieldVolatility/assets/129342521/cb77dd6d-092b-49d3-8fb3-c3a2055bccf2" width="250" height="250">
 
 On comparing the model:
 1. 1-year GARCH model shows a similar but more erratic behavior compared to the 20-year GARCH model.
@@ -61,11 +61,11 @@ On comparing the model:
 
 Lets now create a graphical comparison between the original data (x_1), the data after applying GARCH modeling (res_1), and a normal distribution to visualize the changes in the data distribution due to the GARCH modeling to asses how well Garch model fits.
 
-<img src="https://github.com/TejaswiniPemmaraju/GARCH_BondYieldVolatility/assets/129342521/4f0b7383-1cd2-4c17-b224-500d2aa325c4" width="350" height="350">
+<img src="https://github.com/TejaswiniPemmaraju/GARCH_BondYieldVolatility/assets/129342521/168dd53f-202d-4087-af3d-bce1dbf9e1a1" width="350" height="350">
 
 To focus on the tails where the differences are most profound lets draw Q-Q plots:
 
-<img src="https://github.com/TejaswiniPemmaraju/GARCH_BondYieldVolatility/assets/129342521/a95bf388-84be-4269-96bd-6f88ce8774e0" width="350" height="350">
+<img src="https://github.com/TejaswiniPemmaraju/GARCH_BondYieldVolatility/assets/129342521/71c0ae49-0af7-4ce6-8346-614ed73ee842" width="350" height="350">
 
 ### Key Findings:
 
